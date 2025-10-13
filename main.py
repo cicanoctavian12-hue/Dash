@@ -7,7 +7,7 @@ import asyncio
 import json
 from datetime import datetime
 
-TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -1478,7 +1478,7 @@ async def ticket(ctx):
 
 if __name__ == '__main__':
     if not TOKEN:
-        print('Error: DISCORD_BOT_TOKEN environment variable not set!')
+        print('Error:TOKEN environment variable not set!')
         print('Please set your Discord bot token in the Secrets tab.')
         exit(1)
     
