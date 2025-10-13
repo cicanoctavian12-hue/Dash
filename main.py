@@ -8,6 +8,7 @@ import json
 from datetime import datetime
 from keep_alive import keep_alive
 
+keep_alive()
 TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.default()
