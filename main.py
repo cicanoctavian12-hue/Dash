@@ -1010,14 +1010,6 @@ async def winner(ctx, member: discord.Member):
             winner_display = get_player_display_name(winner_data, ctx.guild.id)
             
             embed = discord.Embed(
-                title="🏆 Tournament Winners!",
-                description=f"Congratulations to **{winner_display}** for winning the\n**{tournament.title}** tournament! 🎉",
-                color=0xffd700
-            )
-            
-            embed.add_field(name="<:map:1409924163346370560> Map", value=tournament.map, inline=True)
-            embed.add_field(name="<:abilities:1402690411759407185> Abilities", value=tournament.abilities, inline=True)
-            embed.add_field(name="🎮 Mode", value=tournament.mode, inline=True)
             
             results_display = "<:Leaderboard:1406282721436762244>Top 4<:Leaderboard:1406282721436762244>\n"
             for place, player_obj in placements[:4]:
@@ -1035,11 +1027,6 @@ async def winner(ctx, member: discord.Member):
             
             embed.add_field(name="\u200b", value=results_display, inline=False)
             
-            prize_text = f"<:Crown:1400924187325104258> **Prizes**\n"
-            prize_text += f"<a:1st:1413906428850344028> 1st: {tournament.prize_1st}\n"
-            prize_text += f"<a:2nd_animated:1413906496164724968> 2nd: {tournament.prize_2nd}\n"
-            prize_text += f"<a:3rd_animated:1413906557997154385> 3rd: {tournament.prize_3rd}\n"
-            prize_text += f"<:TimeTrial:1401999416688382096> 4th: {tournament.prize_4th}\n"
             
             embed.add_field(name="\u200b", value=prize_text, inline=False)
             
