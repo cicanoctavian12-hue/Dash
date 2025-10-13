@@ -1012,7 +1012,7 @@ async def winner(ctx, member: discord.Member):
             
             embed = discord.Embed(
             
-            results_display = "<:Leaderboard:1406282721436762244>Top 4<:Leaderboard:1406282721436762244>\n"
+            results_display == "<:Leaderboard:1406282721436762244>Top 4<:Leaderboard:1406282721436762244>\n"
             for place, player_obj in placements[:4]:
                 player_str = get_player_display_name(player_obj, ctx.guild.id)
                 if place == 1:
