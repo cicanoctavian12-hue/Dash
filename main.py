@@ -1024,7 +1024,7 @@ async def winner(ctx, member: discord.Member):
                 elif place == 4:
                     results_display += f"<:TimeTrial:1401999416688382096>4th: {player_str}\n"
             
-            results_display += "\n<:star:1413871338803822684>Congrats!"
+            results_display += "\n<:star:1413871338803822684>Congrats!")
             
             embed.add_field(name="\u200b", value=results_display, inline=False)
             
