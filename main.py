@@ -6,8 +6,10 @@ import random
 import asyncio
 import json
 from datetime import datetime
+from keep_alive import keep_alive
 
-TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+keep_alive()
+TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -1153,6 +1155,7 @@ async def winner(ctx, member: discord.Member):
                     results_display += f"<:TimeTrial:1401999416688382096>4th: {player_str}\n"
             
             results_display += "\n<:star:1413871338803822684>Congrats!\n"
+            
             results_display += f"<:Crown:1400924187325104258> **Prizes**\n"
             results_display += f"<a:1st:1413906428850344028> 1st: {tournament.prize_1st}\n"
             results_display += f"<a:2nd_animated:1413906496164724968> 2nd: {tournament.prize_2nd}\n"
