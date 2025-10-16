@@ -1144,7 +1144,6 @@ async def winner(ctx, member: discord.Member):
                     player_str = get_team_display_name(ctx.guild.id, player_obj)
                 else:
                     player_str = get_player_display_name(player_obj, ctx.guild.id)
-                
                 if place == 1:
                     results_display += f"<a:1st:1413906428850344028>1st: {player_str}\n"
                 elif place == 2:
