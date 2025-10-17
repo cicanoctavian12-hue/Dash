@@ -1136,7 +1136,6 @@ async def winner(ctx, member: discord.Member):
                 placements.append((4, all_eliminated[-3]))
             
             embed = discord.Embed(color=0xffd700)
-            
             results_display = "<:Leaderboard:1406282721436762244>Top 4<:Leaderboard:1406282721436762244>\n"
             
             for place, player_obj in placements[:4]:
@@ -1155,7 +1154,7 @@ async def winner(ctx, member: discord.Member):
             
             results_display += "\n<:star:1413871338803822684>Congrats!\n"
             
-            results_display += f"<:Crown:1400924187325104258> **Prizes**\n"
+            results_display += f"\n<:Crown:1400924187325104258> **Prizes**\n"
             results_display += f"<a:1st:1413906428850344028> 1st: {tournament.prize_1st}\n"
             results_display += f"<a:2nd_animated:1413906496164724968> 2nd: {tournament.prize_2nd}\n"
             results_display += f"<a:3rd_animated:1413906557997154385> 3rd: {tournament.prize_3rd}\n"
